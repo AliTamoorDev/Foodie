@@ -1,5 +1,5 @@
 # Foodie
- Restaurant Analytics and Management App designed for ipads and iphones
+ Restaurant Analytics and Management App designed escpecially for ipads.
 
 ![1](https://github.com/AliTamoorDev/Foodie/assets/95581643/3b2c8ac9-916c-47c4-aa70-dba409ad5efe)
 ![2](https://github.com/AliTamoorDev/Foodie/assets/95581643/0234ccb8-68cc-48da-952c-63f7bbb735a4)
