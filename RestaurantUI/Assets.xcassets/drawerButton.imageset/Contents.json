@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "drawerButton.pdf",
+      "idiom" : "ipad"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
