@@ -1,6 +1,6 @@
 //
 //  Restaurant.swift
-//  TestUI
+//  RestaurantUI
 //
 //  Created by Ali Tamoor  on 01/09/2023.
 //
@@ -31,7 +31,7 @@ struct RestaurantHeaderView: View {
         VStack {
             VStack {
                 HStack {
-                    Text("FIRST FLOOR BAR")
+                    Text("FIRST FLOOR KITCHEN")
                         .font(
                             Font.custom("Lato-Bold", size: 40)
                         )

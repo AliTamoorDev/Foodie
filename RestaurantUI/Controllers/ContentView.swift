@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  TestUI
+//  RestaurantUI
 //
 //  Created by Ali Tamoor  on 31/08/2023.
 //
