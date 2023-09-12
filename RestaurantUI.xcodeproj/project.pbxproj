@@ -50,6 +50,7 @@
 		32DE724E2AA3546E003EFDB7 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE72492AA3546E003EFDB7 /* EmployeeView.swift */; };
 		32DE72502AA35524003EFDB7 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE724F2AA35524003EFDB7 /* UIViewExt.swift */; };
 		32FB33352AA4CFBE00962A89 /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FB33332AA4CFBE00962A89 /* PieSliceView.swift */; };
+		DCA7D5D92AB0B13B008F791B /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7D5D82AB0B13B008F791B /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		32DE72492AA3546E003EFDB7 /* EmployeeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
 		32DE724F2AA35524003EFDB7 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		32FB33332AA4CFBE00962A89 /* PieSliceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieSliceView.swift; sourceTree = "<group>"; };
+		DCA7D5D82AB0B13B008F791B /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +211,8 @@
 		32A6BE592AA38406007F8CC5 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				32A6BE5A2AA38406007F8CC5 /* MenusView.swift */,
 				32A6BE5B2AA38406007F8CC5 /* MenusManagement.swift */,
+				32A6BE5A2AA38406007F8CC5 /* MenusView.swift */,
 			);
 			path = Menus;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				32A6BE612AA39891007F8CC5 /* DropDownButton.swift */,
+				DCA7D5D82AB0B13B008F791B /* CustomPicker.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -268,8 +271,8 @@
 		32DE72482AA3546E003EFDB7 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
-				32DE72492AA3546E003EFDB7 /* EmployeeView.swift */,
 				32A6BE572AA36280007F8CC5 /* EmployeeManagement.swift */,
+				32DE72492AA3546E003EFDB7 /* EmployeeView.swift */,
 			);
 			path = Employees;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				32A6BE652AA3BCC4007F8CC5 /* SchMenusManagement.swift in Sources */,
 				32A6BE602AA39604007F8CC5 /* SpecialScheduling.swift in Sources */,
 				32DE724B2AA3546E003EFDB7 /* OrdersView.swift in Sources */,
+				DCA7D5D92AB0B13B008F791B /* CustomPicker.swift in Sources */,
 				32A01AD22AA4A44D00E4B28B /* ItemInsightsView.swift in Sources */,
 				32DE724D2AA3546E003EFDB7 /* ContentView.swift in Sources */,
 				32A01ACD2AA4838C00E4B28B /* CustomerModels.swift in Sources */,
@@ -532,7 +536,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +564,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

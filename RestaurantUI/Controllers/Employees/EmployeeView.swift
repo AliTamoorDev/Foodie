@@ -63,7 +63,7 @@ struct GridItemView: View {
             HStack(spacing: 0) {
                 Text(item.name)
                     .font(
-                        Font.custom("Lato-Regular", size: 20)
+                        Font.custom("Lato-SemiBold", size: 20)
                     )
                     .foregroundColor(Color("TertiaryBG"))
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -72,7 +72,7 @@ struct GridItemView: View {
                     .padding(.trailing,25)
                 Text(item.role)
                     .font(
-                        Font.custom("Lato-Regular", size: 20)
+                        Font.custom("Lato-SemiBold", size: 20)
                     )
                     .foregroundColor(Color("White"))
                     .frame(alignment: .trailing)
@@ -105,7 +105,7 @@ struct RoleTypeHeaderView: View {
         HStack {
             Text(employeeType)
                 .font(
-                    Font.custom("Lato-Bold", size: 25)
+                    Font.custom("Lato-Heavy", size: 25)
                 )
                 .foregroundColor(Color("White"))
             //                .padding(.leading)

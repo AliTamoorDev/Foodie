@@ -72,14 +72,14 @@ struct MenuItemView: View {
             HStack(spacing: 0) {
                 Text(item.name)
                     .font(
-                        Font.custom("Lato-Regular", size: 20)
+                        Font.custom("Lato-SemiBold", size: 20)
                     )
                     .foregroundColor(titleColor)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.leading)
                 Text("$\(item.price)")
                     .font(
-                        Font.custom(priceFontStyle, size: 20)
+                        Font.custom(priceFontStyle, size: 18)
                     )
                     .foregroundColor(priceColor)
                     .frame(alignment: .trailing)
@@ -113,7 +113,7 @@ struct MenuRoleTypeHeaderView: View {
         HStack {
             Text(menuType)
                 .font(
-                    Font.custom("Lato-Bold", size: 25)
+                    Font.custom("Lato-Heavy", size: 25)
                 )
                 .foregroundColor(Color("White"))
             //                .padding(.leading)

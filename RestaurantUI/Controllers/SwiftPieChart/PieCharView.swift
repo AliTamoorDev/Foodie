@@ -101,12 +101,13 @@ public struct PieChartView: View {
                     
                 }
                 PieChartRows(colors: self.colors, names: self.names, values: self.values.map { self.formatter($0) }, percents: self.values.map { String(format: "%.2f%%", $0 * 100 / self.values.reduce(0, +)) })
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 20)
             }
             .background(self.backgroundColor)
             .foregroundColor(Color.white)
             .cornerRadius(20)
         }
+        .padding(.horizontal)
     }
 }
 

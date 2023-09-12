@@ -16,11 +16,11 @@ struct SpecialScheduling: View {
         
         //        ScheduleView(day: events[0])
         ScrollView() {
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 
                 Text("Special Scheduling")
                     .font(
-                        Font.custom("Lato-Semibold", size: 25)
+                        Font.custom("Lato-Semibold", size: 32)
                     )
                     .bold()
                     .foregroundColor(Color("TertiaryBG"))
@@ -72,7 +72,7 @@ struct DayView: View {
         HStack(alignment: .top) {
             Text("\(day):")
                 .font(
-                    Font.custom("Lato-Bold", size: 15)
+                    Font.custom("Lato-SemiBold", size: 20)
                 )
                 .foregroundColor(Color("TertiaryBG"))
             

@@ -23,7 +23,7 @@ struct ItemInsights: View {
                     
                     Text("ITEM INSIGHTS")
                         .font(
-                            Font.custom("Lato-Bold", size: 40)
+                            Font.custom("Lato-Heavy", size: 40)
                         )
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -31,10 +31,10 @@ struct ItemInsights: View {
                     
                     Spacer()
                     VStack {
-                        VStack {
+                        VStack(spacing: 2) {
                             Text("Date:")
                                 .font(
-                                    Font.custom("Lato-Bold", size: 25)
+                                    Font.custom("Lato-Bold", size: 18)
                                 )
                                 .foregroundColor(Color("TertiaryBG"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -51,9 +51,12 @@ struct ItemInsights: View {
                     .frame(maxWidth: 300, alignment: .trailing)
                     .padding(.bottom)
                 }
-                .padding(.horizontal)
+                .padding(.leading, 25)
+                .padding(.trailing, 52)
                 
                 TopView()
+                    .padding(.leading, 25)
+                    .padding(.trailing, 52)
                     .padding(.bottom,35)
                 
                 HStack() {
@@ -61,17 +64,17 @@ struct ItemInsights: View {
                         values: [1300, 500,300,170],
                         names: ["Ice Soda", "Ice Tea", "Cold Drinks","Water"],
                         formatter: {value in String(format: "$%.2f", value)},
-                        backgroundColor: Color("PrimaryBG"), widthFraction: 0.6, innerRadiusFraction: 0)
-                    .frame(maxWidth: UIScreen.main.bounds.width * 0.33)
+                        backgroundColor: Color("PrimaryBG"), widthFraction: 0.5, innerRadiusFraction: 0)
                     .shadow(color: .black.opacity(0.25), radius: 6.5, x: 0, y: 4)
+//                    .frame(maxWidth: UIScreen.main.bounds.width * 0.3)
 
                     ItemInsightsView()
-                        .frame(maxWidth: UIScreen.main.bounds.width * 0.66)
+                        .frame(minWidth: UIScreen.main.bounds.width * 0.62)
                 }
-                .padding(.horizontal, 35)
+                .padding(.leading, 20)
                 Spacer()
             }
-            .padding(.top, 20)
+            .padding(.top, 30)
         }
         .ignoresSafeArea()
         .background(Color("SecondaryBG"))
@@ -88,15 +91,16 @@ struct TopView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                VStack {
+                VStack(spacing: 0) {
                     Text("Menu:")
                         .font(
-                            Font.custom("Lato-Bold", size: 25)
+                            Font.custom("Lato-Bold", size: 18)
                         )
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    DropDownButton(title: "Happy Hour", fontSize: 20.0, alignment: .leading)
+//                        .padding(.bottom,4)
+
+                    CustomPicker(items: [Items(value: "Happy Hour"), Items(value: "Sad Hour")])
                 }
                 .padding(.leading, 30)
                 .frame(maxWidth: 300, alignment: .trailing)
@@ -104,36 +108,38 @@ struct TopView: View {
                 Spacer()
                 
                 
-                VStack {
+                VStack(spacing: 0) {
                     Text("Item Category:")
                         .font(
-                            Font.custom("Lato-Bold", size: 25)
+                            Font.custom("Lato-Bold", size: 18)
                         )
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
+//                        .padding(.bottom,4)
                     
-                    DropDownButton(title: "All Items", fontSize: 20.0, alignment: .leading)
+                   
+                    CustomPicker(items: [Items(value: "All Items"), Items(value: "Special Items")])
                 }
                 .frame(maxWidth: 300, alignment: .trailing)
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 
                 
                 Spacer()
-                VStack {
+                VStack(spacing: 0) {
                     Text("Filter:")
                         .font(
-                            Font.custom("Lato-Bold", size: 25)
+                            Font.custom("Lato-Bold", size: 18)
                         )
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    DropDownButton(title: "Best Selling", fontSize: 20.0, alignment: .leading)
+
+                     CustomPicker(items: [Items(value: "Best Selling"), Items(value: "Worst Selling")])
                 }
                 
                 .frame(maxWidth: 300, alignment: .trailing)
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
             }
-            .padding(.horizontal)
+//            .padding(.horizontal)
         }
     }
 }

@@ -42,7 +42,7 @@ struct ExtractedView: View {
                 VStack {
                     Text("#\(orders.orderNumber)")
                         .font(
-                            Font.custom("Lato-Bold", size: 55)
+                            Font.custom("Lato-Heavy", size: 55)
                         )
                         .bold()
                         .foregroundColor(Color("TertiaryBG"))
@@ -60,7 +60,7 @@ struct ExtractedView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(orders.name)
                         .font(
-                            Font.custom("Lato-Bold", size: 45)
+                            Font.custom("Lato-Heavy", size: 45)
                         )
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading)
@@ -70,14 +70,14 @@ struct ExtractedView: View {
                         HStack {
                             Text("\(order.itemName) (\(order.quantity))")
                                 .font(
-                                    Font.custom("Lato-Semibold", size: 30)
+                                    Font.custom("Lato-Heavy", size: 30)
                                 )
                                 .foregroundColor(Color("White"))
                                 .padding(.trailing, 25)
                             Text("$\(order.price)")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .font(
-                                    Font.custom("Lato-Bold", size: 30)
+                                    Font.custom("Lato-SemiBold", size: 25)
                                 )
                                 .foregroundColor(Color("WhiteLight"))
                         }

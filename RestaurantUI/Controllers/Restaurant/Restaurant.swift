@@ -26,14 +26,14 @@ struct Restaurant_Previews: PreviewProvider {
 }
 
 struct RestaurantHeaderView: View {
-    @State var isToggled: Bool = true
+    @State var isToggled: Bool = false
     var body: some View {
         VStack {
             VStack {
                 HStack {
                     Text("FIRST FLOOR KITCHEN")
                         .font(
-                            Font.custom("Lato-Bold", size: 40)
+                            Font.custom("Lato-Heavy", size: 40)
                         )
                         .kerning(0.38)
                         .multilineTextAlignment(.center)
@@ -57,7 +57,7 @@ struct RestaurantHeaderView: View {
                     } label: {
                         Text("Undo")
                             .font(
-                                Font.custom("Lato-Bold", size: 30)
+                                Font.custom("Lato-Heavy", size: 30)
                             )
                             .padding(.vertical, 10)
                             .padding(.horizontal, 15)
@@ -77,7 +77,7 @@ struct RestaurantHeaderView: View {
                     } label: {
                         Text("Menu Access")
                             .font(
-                                Font.custom("Lato-Bold", size: 30)
+                                Font.custom("Lato-Heavy", size: 30)
                             )
                             .padding(.vertical, 10)
                             .padding(.horizontal, 15)
@@ -92,7 +92,7 @@ struct RestaurantHeaderView: View {
                     .padding(.trailing, 30)
                 }
             }
-            .padding(.top,25)
+            .padding(.top,30)
             .padding(.bottom, 10)
         }
     }
@@ -135,7 +135,7 @@ struct RestaurantFooterView: View {
                 Text("Queue: 57")
                     .padding(.leading, 50)
                     .font(
-                        Font.custom("Lato-Bold", size: 30)
+                        Font.custom("Lato-Heavy", size: 40)
                     )
                     .foregroundColor(Color("TertiaryBG"))
                 Spacer()
@@ -146,7 +146,7 @@ struct RestaurantFooterView: View {
                 Text("Tips: $246.65")
                     .padding(.trailing, 44)
                     .font(
-                        Font.custom("Lato-Bold", size: 30)
+                        Font.custom("Lato-Heavy", size: 40)
                     )
                     .foregroundColor(Color("TertiaryBG"))
             }

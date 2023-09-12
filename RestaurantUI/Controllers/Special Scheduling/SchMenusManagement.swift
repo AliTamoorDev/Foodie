@@ -22,7 +22,7 @@ struct SchMenuManagement: View {
 
                     Text("MENU MANAGEMENT")
                         .font(
-                            Font.custom("Lato-Bold", size: 40)
+                            Font.custom("Lato-Heavy", size: 40)
                         )
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -67,10 +67,11 @@ Spacer()
                             }
 
                         }
-                        .padding(.bottom, 30)
+                        .padding(.vertical, 30)
 
                 }
-                .padding(.horizontal)
+                .padding(.leading, 25)
+                .padding(.trailing, 42)
                 
                 HStack(alignment: .top) {
                     SpecialScheduling()
@@ -93,7 +94,7 @@ Spacer()
                 }
 //                Spacer()
             }
-            .padding(.top, 20)
+            .padding(.top, 30)
         }
         .ignoresSafeArea()
         .background(Color("SecondaryBG"))

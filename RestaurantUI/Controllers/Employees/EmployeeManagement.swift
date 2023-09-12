@@ -37,7 +37,7 @@ struct EmployeeManagement: View {
                     
                     Text("EMPLOYEE MANAGEMENT")
                         .font(
-                            Font.custom("Lato-Bold", size: 40)
+                            Font.custom("Lato-Heavy", size: 40)
                         )
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -64,7 +64,7 @@ struct EmployeeManagement: View {
                 }
                 .padding(.horizontal, 55)
             }
-            .padding(.top, 20)
+            .padding(.top, 30)
         }
         .ignoresSafeArea()
         .background(Color("SecondaryBG"))

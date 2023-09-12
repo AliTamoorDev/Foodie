@@ -19,9 +19,9 @@ struct CustomerInsights: View {
     
     
     let columns = [
-        GridItem(.flexible(minimum: 50), spacing: 25),
-        GridItem(.flexible(minimum: 50), spacing: 25),
-        GridItem(.flexible(minimum: 50), spacing: 25)
+        GridItem(.flexible(minimum: 50), spacing: 27),
+        GridItem(.flexible(minimum: 50), spacing: 27),
+        GridItem(.flexible(minimum: 50), spacing: 27)
     ]
     
     var body: some View {
@@ -44,20 +44,21 @@ struct CustomerInsights: View {
                         .padding(.leading)
                     
                 }
-                .padding(.horizontal)
+                .padding(.leading, 25)
                 
                 HStack {
                     DropDownButton(title: "10/01/23 - 10/07/23", fontSize: 16.0, image: "calendar", alignment: .center)
                         .padding(.trailing)
                         .frame(width: 260, alignment: .trailing)
                 }
-                .padding(.bottom)
+                .padding(.bottom,58)
+                .padding(.trailing, 15)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 
                 
                 VStack() {
-                    LazyVGrid(columns: columns, spacing: 23) {
+                    LazyVGrid(columns: columns, spacing: 52) {
                         
                         ForEach(gridData, id: \.id) { item in
                             CustomerInsightItemView(item: item)
@@ -71,9 +72,11 @@ struct CustomerInsights: View {
                 }
                 Image("bottleCap")
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                //                .padding(.top, 20)
+                                .padding(.top, 65)
+                                .padding(.trailing, 25)
+
             }
-            .padding(.top, 20)
+            .padding(.top, 30)
         }
         .ignoresSafeArea()
         .background(Color("SecondaryBG"))
@@ -88,7 +91,7 @@ struct CustomerInsightItemView: View {
         VStack() {
             Text(item.name)
                 .font(
-                    Font.custom("Lato-Regular", size: 22)
+                    Font.custom("Lato-SemiBold", size: 22)
                 )
                 .foregroundColor(Color("TertiaryBG"))
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -97,7 +100,7 @@ struct CustomerInsightItemView: View {
             VStack(spacing: 0) {
                 Text("$\(formatNumber(item.amount))")
                     .font(
-                        Font.custom("Lato-Bold", size: 40)
+                        Font.custom("Lato-Heavy", size: 40)
                     )
                     .foregroundColor(Color("White"))
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -135,7 +138,7 @@ struct CheckInsView: View {
         VStack {
             Text(item.name)
                 .font(
-                    Font.custom("Lato-Regular", size: 22)
+                    Font.custom("Lato-SemiBold", size: 22)
                 )
                 .foregroundColor(Color("TertiaryBG"))
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -152,7 +155,7 @@ struct CheckInsView: View {
                     Spacer()
                     Text("\(formatNumber(item.newCheckIns))%")
                         .font(
-                            Font.custom("Lato-Bold", size: 30)
+                            Font.custom("Lato-Heavy", size: 30)
                         )
                         .foregroundColor(Color("White"))
                     
@@ -178,7 +181,7 @@ struct CheckInsView: View {
                     Spacer()
                     Text("\(formatNumber(item.returningCheckIns))%")
                         .font(
-                            Font.custom("Lato-Bold", size: 30)
+                            Font.custom("Lato-Heavy", size: 30)
                         )
                         .foregroundColor(Color("White"))
                     
@@ -196,7 +199,7 @@ struct CheckInsView: View {
                 .padding(.bottom)
                 .frame(maxWidth: .infinity)
 
-            }
+            }.padding()
         }
         .frame(maxHeight: .infinity)
         .background(Color("PrimaryBG"))
@@ -213,12 +216,12 @@ struct AvgTipView: View {
         VStack {
             Text(item.name)
                 .font(
-                    Font.custom("Lato-Regular", size: 22)
+                    Font.custom("Lato-SemiBold", size: 22)
                 )
                 .foregroundColor(Color("TertiaryBG"))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,20)
-                .padding(.top, 2)
+                .padding(.top, 5)
             VStack {
                 HStack(spacing: 0) {
                     Text("\(formatNumber(item.percentage))%")
@@ -230,7 +233,7 @@ struct AvgTipView: View {
                     
                     Text("$\(formatNumber(item.amount))")
                         .font(
-                            Font.custom("Lato-Bold", size: 40)
+                            Font.custom("Lato-Heavy", size: 40)
                         )
                         .foregroundColor(Color("White"))
                         .frame(maxWidth: .infinity,alignment: .center)
@@ -250,7 +253,7 @@ struct AvgTipView: View {
                     
                     Text("\(formatNumber(item.secondPercentage))%")
                         .font(
-                            Font.custom("Lato-Bold", size: 40)
+                            Font.custom("Lato-Heavy", size: 40)
                         )
                         .foregroundColor(Color("White"))
                         .frame(maxWidth: .infinity,alignment: .center)
@@ -260,7 +263,8 @@ struct AvgTipView: View {
                 .padding(.horizontal)
                 .padding(.bottom)
             }
-            .padding(.horizontal)
+            .padding()
+//            .padding(.horizontal)
         }
         .frame(maxHeight: .infinity)
         .background(Color("PrimaryBG"))

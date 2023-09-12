@@ -59,13 +59,13 @@ struct ItemInsightItem: View {
             VStack(alignment: .leading, spacing: 0) {
                 Text(item.name)
                     .font(
-                        Font.custom("Lato-Regular", size: 25)
+                        Font.custom("Lato-SemiBold", size: 25)
                     )
                     .foregroundColor(Color("TertiaryBG"))
                 
                 Text(item.status)
                     .font(
-                        Font.custom("Lato-Bold", size: 20)
+                        Font.custom("Lato-SemiBold", size: 18)
                     )
                     .padding(.leading)
                     .foregroundColor(Color("WhiteLight"))
@@ -73,14 +73,16 @@ struct ItemInsightItem: View {
             .padding(.leading)
             .frame(maxWidth: .infinity, alignment: .leading)
             HStack {
+                Spacer()
                 Text(String(item.noOfItemsSold))
                     .font(
-                        Font.custom("Lato-Bold", size: 42)
+                        Font.custom("Lato-Heavy", size: 50)
                     )
-                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.horizontal, 30)
+                    .frame( alignment: .trailing)
                     .foregroundColor(Color("White"))
-                    .padding(.leading)
-                
+                    
+//                Spacer()
                 HStack {
                     Image(item.percentage > 0 ? "arrowGreen" : "arrowRed")
                     Text("\(String(abs(item.percentage)))%")
