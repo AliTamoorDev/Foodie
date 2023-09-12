@@ -109,7 +109,7 @@ struct ScheduleView: View {
                     .padding(.horizontal,10)
                     .foregroundColor(Color("PrimaryBG"))
                     .background(Color.white)
-                    .cornerRadius(10)
+                    .cornerRadius(8)
                     .shadow(color: .black.opacity(0.28), radius: 7.5, x: 0, y: 4)
                 
                 Text("To: ")
@@ -118,12 +118,12 @@ struct ScheduleView: View {
                     .padding(.horizontal,10)
                     .foregroundColor(Color("PrimaryBG"))
                     .background(Color.white)
-                    .cornerRadius(10)
+                    .cornerRadius(8)
                     .shadow(color: .black.opacity(0.28), radius: 7.5, x: 0, y: 4)
             }
             .padding(.trailing)
             .font(
-                Font.custom("Lato-Bold", size: 15)
+                Font.custom("Lato-Bold", size: 12)
             )
             .foregroundColor(.white)
         }

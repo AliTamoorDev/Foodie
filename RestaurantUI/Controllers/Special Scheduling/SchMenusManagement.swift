@@ -67,7 +67,7 @@ Spacer()
                             }
 
                         }
-                        .padding(.vertical, 30)
+                        .padding(.top, 30)
 
                 }
                 .padding(.leading, 25)
@@ -75,7 +75,7 @@ Spacer()
                 
                 HStack(alignment: .top) {
                     SpecialScheduling()
-                        .padding(.leading, 20)
+                        .padding(.leading, 30)
                         .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                     VStack() {
                         
