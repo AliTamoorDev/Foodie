@@ -50,7 +50,7 @@ public struct PieChartView: View {
             VStack{
                 Text("Sale Breakdown")
                     .foregroundColor(Color("TertiaryBG"))
-                    .font(.custom("Lato-Semibold", size: 45))
+                    .font(.custom("Lato-Semibold", size: 32))
                     .padding(.vertical, 40)
                 ZStack{
                     ForEach(0..<self.values.count){ i in

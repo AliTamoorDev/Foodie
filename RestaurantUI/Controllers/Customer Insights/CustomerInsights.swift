@@ -24,6 +24,9 @@ struct CustomerInsights: View {
         GridItem(.flexible(minimum: 50), spacing: 27)
     ]
     
+    @State var isPresented = false
+    @State private var dates: Set<DateComponents> = []
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -47,9 +50,35 @@ struct CustomerInsights: View {
                 .padding(.leading, 25)
                 
                 HStack {
-                    DropDownButton(title: "10/01/23 - 10/07/23", fontSize: 16.0, image: "calendar", alignment: .center)
-                        .padding(.trailing)
-                        .frame(width: 260, alignment: .trailing)
+                    Button {
+                        isPresented.toggle()
+                    } label: {
+                        HStack {
+                            Text("Select Date")
+                                .frame(maxWidth: .infinity,alignment: .center)
+                                
+                                .padding(.vertical, 10)
+//                                        .padding(.horizontal, 15)
+                                .foregroundColor(Color("PrimaryBG"))
+                                .cornerRadius(10)
+                            Spacer()
+                            Image(systemName: "calendar")
+                                .bold()
+                            
+                                .foregroundColor(Color("SecondaryBG"))
+                                .padding(.trailing)
+                            
+                        }
+                        .font(
+                            Font.custom("Lato-Bold", size: 15)
+                        )
+                        .background(content: {
+                            Color("White")
+                        })
+                        .cornerRadius(8)
+                    }
+                    .frame(width: 260, alignment: .trailing)
+                    .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 }
                 .padding(.bottom,58)
                 .padding(.trailing, 15)
@@ -80,6 +109,12 @@ struct CustomerInsights: View {
         }
         .ignoresSafeArea()
         .background(Color("SecondaryBG"))
+        .sheet(isPresented: $isPresented) {
+            VStack {
+                MultiDatePicker("Select dates", selection: $dates)
+            }
+            .presentationDetents([.medium, .large])
+        }
     }
 }
 

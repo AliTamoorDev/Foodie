@@ -11,6 +11,8 @@ import SwiftUI
 struct ItemInsights: View {
     @State var itemsInsightWidth = UIScreen.main.bounds.width * 0.62
     @State var pieChartWidth = UIScreen.main.bounds.width * 0.38
+    @State var isPresented = false
+    @State private var dates: Set<DateComponents> = []
     var body: some View {
         
         ScrollView {
@@ -40,15 +42,36 @@ struct ItemInsights: View {
                                 )
                                 .foregroundColor(Color("TertiaryBG"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
-//                                .padding(.leading)
-                            HStack {
-                                DropDownButton(title: "10/01/23 - 10/07/23", fontSize: 16.0, image: "calendar", alignment: .center)
-//                                    .padding(.trailing)
-                                    .frame(width: 300, alignment: .trailing)
-                                    .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
+                            //                                .padding(.leading)
+                            Button {
+                                isPresented.toggle()
+                            } label: {
+                                HStack {
+                                    Text("Select Date")
+                                        .frame(maxWidth: .infinity,alignment: .center)
+                                        .font(
+                                            Font.custom("Lato-Bold", size: 20)
+                                        )
+                                        .padding(.vertical, 10)
+//                                        .padding(.horizontal, 15)
+                                        .foregroundColor(Color("PrimaryBG"))
+                                        .cornerRadius(10)
+                                    Spacer()
+                                    Image(systemName: "calendar")
+                                        .bold()
+                                    
+                                        .foregroundColor(Color("SecondaryBG"))
+                                        .padding(.trailing)
+                                    
+                                }
+                                .background(content: {
+                                    Color("White")
+                                })
+                                .cornerRadius(8)
                             }
-                            
+                            .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                         }
+                        
                     }
                     .frame(maxWidth: 300, alignment: .trailing)
                     .padding(.bottom)
@@ -71,18 +94,27 @@ struct ItemInsights: View {
 
                     ItemInsightsView()
                         .frame(width: itemsInsightWidth)
+//                        .padding(.trailing, 20)
                 }
                 .padding(.leading, 20)
                 .onAppear {
                   itemsInsightWidth = UIScreen.main.bounds.width * 0.65
-                  pieChartWidth = UIScreen.main.bounds.width * 0.35
+                  pieChartWidth = UIScreen.main.bounds.width * 0.32
                 }
                 Spacer()
             }
             .padding(.top, 30)
         }
+        
         .ignoresSafeArea()
         .background(Color("SecondaryBG"))
+
+        .sheet(isPresented: $isPresented) {
+            VStack {
+                MultiDatePicker("Select dates", selection: $dates)
+            }
+            .presentationDetents([.medium, .large])
+        }
     }
 }
 
@@ -133,7 +165,7 @@ struct TopView: View {
                         .foregroundColor(Color("TertiaryBG"))
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    CustomPicker(options: ["All Items", "Worst Selling"])
+                    CustomPicker(options: ["Best Selling", "Worst Selling"])
                 }
                 .frame(maxWidth: 300)
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
