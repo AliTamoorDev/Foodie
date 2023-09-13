@@ -81,7 +81,7 @@ struct MenuManagement: View {
                             .foregroundColor(Color("TertiaryBG"))
                             .frame(maxWidth: .infinity, alignment: .leading)
 
-                        CustomPicker(items: [Items(value: "Country Night"), Items(value: "Special Day")])
+                        CustomPicker(options: ["Best Selling", "Worst Selling"])
 
                     }
                     .frame(width: 310)

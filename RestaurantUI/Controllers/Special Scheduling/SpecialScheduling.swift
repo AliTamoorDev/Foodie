@@ -99,9 +99,9 @@ struct ScheduleView: View {
     var day: Event
     var body: some View {
         VStack(alignment: .leading) {
-            DropDownButton(title: day.eventName, fontSize: 15.0, alignment: .center)
-                .frame(width: 160)
-                .shadow(color: .black.opacity(0.28), radius: 8.5, x: 0, y: 4)
+            CustomPicker(options: ["Happy hour", "Sad Hour"], size: 12.0)
+                .frame(width: 140)
+            
             HStack {
                 Text("From: ")
                 Text(day.startTime)
@@ -109,7 +109,7 @@ struct ScheduleView: View {
                     .padding(.horizontal,10)
                     .foregroundColor(Color("PrimaryBG"))
                     .background(Color.white)
-                    .cornerRadius(10)
+                    .cornerRadius(8)
                     .shadow(color: .black.opacity(0.28), radius: 7.5, x: 0, y: 4)
                 
                 Text("To: ")
@@ -118,12 +118,12 @@ struct ScheduleView: View {
                     .padding(.horizontal,10)
                     .foregroundColor(Color("PrimaryBG"))
                     .background(Color.white)
-                    .cornerRadius(10)
+                    .cornerRadius(8)
                     .shadow(color: .black.opacity(0.28), radius: 7.5, x: 0, y: 4)
             }
             .padding(.trailing)
             .font(
-                Font.custom("Lato-Bold", size: 15)
+                Font.custom("Lato-Bold", size: 12)
             )
             .foregroundColor(.white)
         }

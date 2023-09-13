@@ -7,57 +7,54 @@
 
 import SwiftUI
 
-struct Items: Identifiable, Hashable {
-    let id = UUID()
-    var value: String
-}
-
 struct CustomPicker: View {
-    var items: [Items]
-    @State var selectedItem: Items = Items(value: "")
-
+    @State private var selectedOption = 0
+    var options:[String]
+    var size: CGFloat = 20.0
     var body: some View {
         
         VStack {
             Menu {
-                Picker(selection: $selectedItem , label:  EmptyView()) {
-                    ForEach(items, id: \.self) { rang in
-                        Text(rang.value)
+                Picker("", selection: $selectedOption) {
+                    ForEach(0..<options.count, id: \.self) { index in
+                        Text(options[index]).tag(index)
                     }
                 }
+                .pickerStyle(DefaultPickerStyle())
             } label: {
                 customlabel
             }
         }
     }
+    
     var customlabel: some View {
         HStack{
-            Text("\(selectedItem.value)")
+            Text("\(options[selectedOption])")
                 .font(
-                    Font.custom("Lato-Bold", size: 20.0)
+                    Font.custom("Lato-Bold", size: size)
                 )
-                .padding(.horizontal, 50)
+                .padding(.leading, 10)
+                .frame(maxWidth: .infinity, alignment: .center)
             Image(systemName: "chevron.down")
+                .padding(.trailing, 20)
                 .bold()
                 .foregroundColor(Color("SecondaryBG"))
         }
-        .frame(maxWidth: .infinity, minHeight: 40)
         .foregroundColor(Color("PrimaryBG"))
-        .padding(.horizontal,5)
+        .padding(.vertical, 10)
         .background(.white)
         .cornerRadius(8)
         .shadow(color: .black.opacity(0.28), radius: 7, x: 0, y: 4)
-        
-        .onAppear {
-            if let firstElement = items.first {
-                selectedItem = firstElement
-            }
-        }
+//        .onAppear {
+//            if let firstElement = items.first {
+//                selectedItem = firstElement
+//            }
+//        }
     }
 }
 
 struct CustomPicker_Previews: PreviewProvider {
     static var previews: some View {
-        CustomPicker(items: [Items(value: "Red"),Items(value: "Green"),Items(value: "Blue"),Items(value: "Yellow")])
+        CustomPicker(options: ["Option 1", "Option 2", "Option 3"])
     }
 }

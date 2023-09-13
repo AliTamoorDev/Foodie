@@ -8,10 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedOption = 0
+       let options = ["Option 1", "Option 2", "Option 3"]
+    
     var body: some View {
-        VStack {
-            ItemInsights()
-        }
+//        ScrollView {
+//            VStack(spacing: 0) {
+//    Text("ASda")
+//                Menu {
+//                    Picker("", selection: $selectedOption) {
+//                        ForEach(0..<options.count, id: \.self) { index in
+//                            Text(options[index]).tag(index)
+//                        }
+//                    }
+//                    .pickerStyle(DefaultPickerStyle())
+//                } label: {
+//                    Text("Selected Option: \(options[selectedOption])")
+//                        .padding()
+//                        .background(Color.red)
+//                        .frame(maxWidth: .infinity)
+//                }
+//
+//            }
+//        }
+        ItemInsights()
     }
     
 }
