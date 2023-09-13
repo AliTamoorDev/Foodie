@@ -81,7 +81,7 @@ struct CustomerInsights: View {
                     .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 }
                 .padding(.bottom,58)
-                .padding(.trailing, 15)
+                .padding(.trailing, 34)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 

@@ -130,7 +130,7 @@ struct TopView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                VStack(spacing: 0) {
+                VStack(spacing: 2) {
                     Text("Menu:")
                         .font(
                             Font.custom("Lato-Bold", size: 18)
@@ -144,7 +144,7 @@ struct TopView: View {
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 Spacer(minLength: 40)
                 
-                VStack(spacing: 0) {
+                VStack(spacing: 2) {
                     Text("Item Category:")
                         .font(
                             Font.custom("Lato-Bold", size: 18)
@@ -157,7 +157,7 @@ struct TopView: View {
                 .shadow(color: .black.opacity(0.28), radius: 10.5, x: 0, y: 4)
                 
                 Spacer(minLength: 40)
-                VStack(spacing: 0) {
+                VStack(spacing: 2) {
                     Text("Filter:")
                         .font(
                             Font.custom("Lato-Bold", size: 18)

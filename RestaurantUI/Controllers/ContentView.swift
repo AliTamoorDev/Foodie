@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var date = Date()
     var body: some View {
         VStack {
-            Restaurant()
+            ItemInsights()
         }
     }
 }

@@ -41,7 +41,6 @@
 		32A6BE5C2AA38406007F8CC5 /* MenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BE5A2AA38406007F8CC5 /* MenusView.swift */; };
 		32A6BE5D2AA38406007F8CC5 /* MenusManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BE5B2AA38406007F8CC5 /* MenusManagement.swift */; };
 		32A6BE602AA39604007F8CC5 /* SpecialScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BE5F2AA39604007F8CC5 /* SpecialScheduling.swift */; };
-		32A6BE622AA39891007F8CC5 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BE612AA39891007F8CC5 /* DropDownButton.swift */; };
 		32A6BE652AA3BCC4007F8CC5 /* SchMenusManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BE642AA3BCC4007F8CC5 /* SchMenusManagement.swift */; };
 		32DE724A2AA3546E003EFDB7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE72422AA3546E003EFDB7 /* Models.swift */; };
 		32DE724B2AA3546E003EFDB7 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE72452AA3546E003EFDB7 /* OrdersView.swift */; };
@@ -90,7 +89,6 @@
 		32A6BE5A2AA38406007F8CC5 /* MenusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenusView.swift; sourceTree = "<group>"; };
 		32A6BE5B2AA38406007F8CC5 /* MenusManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenusManagement.swift; sourceTree = "<group>"; };
 		32A6BE5F2AA39604007F8CC5 /* SpecialScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialScheduling.swift; sourceTree = "<group>"; };
-		32A6BE612AA39891007F8CC5 /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 		32A6BE642AA3BCC4007F8CC5 /* SchMenusManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchMenusManagement.swift; sourceTree = "<group>"; };
 		32DE72422AA3546E003EFDB7 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		32DE72452AA3546E003EFDB7 /* OrdersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 		32A6BE632AA39898007F8CC5 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				32A6BE612AA39891007F8CC5 /* DropDownButton.swift */,
 				DCA7D5D82AB0B13B008F791B /* CustomPicker.swift */,
 			);
 			path = Widgets;
@@ -395,7 +392,6 @@
 				32FB33352AA4CFBE00962A89 /* PieSliceView.swift in Sources */,
 				32DE724E2AA3546E003EFDB7 /* EmployeeView.swift in Sources */,
 				32A6BE5C2AA38406007F8CC5 /* MenusView.swift in Sources */,
-				32A6BE622AA39891007F8CC5 /* DropDownButton.swift in Sources */,
 				32DE724C2AA3546E003EFDB7 /* Restaurant.swift in Sources */,
 				329524DF2A9BA43400958368 /* RestaurantUIApp.swift in Sources */,
 				32A01ACB2AA4756100E4B28B /* CustomerInsights.swift in Sources */,
